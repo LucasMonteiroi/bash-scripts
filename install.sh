@@ -1,13 +1,11 @@
 #!/bin/bash
 question="Do you want to install"
-choices="? (y) Yes | (n) No | (e) Exit"
+choices="(y) Yes | (n) No "
 nochoice="installation option is not chosen"
 
-echo "Entering in su mode"
-sudo su
-
 #--> Git Installation
-echo "$question git $choices"
+echo "$question git?"
+echo "$choices"
 read x
 
 if [[ "${x}" = "y" ]]
@@ -20,7 +18,8 @@ fi
 
 #--> Node Installation
 
-echo "$question nodejs $choices"
+echo "$question nodejs?"
+echo "$choices"
 read x
 
 if [[ "${x}" = "y" ]]
@@ -54,7 +53,8 @@ else
   echo "nodejs $nochoice"
 fi
 
-echo "$question yarn $choices"
+echo "$question yarn?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -71,7 +71,8 @@ fi
 
 #--> Docker Installation
 
-echo "$question docker $choices"
+echo "$question docker?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -97,7 +98,8 @@ fi
 
 #--> Slack Installation
 
-echo "$question slack $choices"
+echo "$question slack?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -109,7 +111,8 @@ fi
 
 #--> VS Code Installation
 
-echo "$question vscode $choices"
+echo "$question vscode?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -121,7 +124,8 @@ fi
 
 #--> Reactjs Installation
 
-echo "$question reactjs $choices"
+echo "$question reactjs?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -133,7 +137,8 @@ fi
 
 #--> Angular Installation
 
-echo "$question angular $choices"
+echo "$question angular?"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -183,9 +188,8 @@ else
 fi
 
 #--> Exit file
-if [[ "${x}" = "e" ]]
-then
-  echo "Thank for use this script, buy me a beer!"
-  echo "https://www.buymeacoffee.com/lucasmonteiroi"
-  exit
-fi
+
+echo "Thank for use this script, buy me a beer!"
+echo "https://www.buymeacoffee.com/lucasmonteiroi"
+sleep 5
+exit
