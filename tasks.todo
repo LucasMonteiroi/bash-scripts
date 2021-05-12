@@ -9,3 +9,4 @@ Extensions:
   ☐ Enable packages to run outside of sudo su mode
   ✔ Change echo for options @done (12/05/2021 19:31:59)
   ✔ Remove sudo su mode, because script is not continuing @done (12/05/2021 19:15:51)
+  ☐ Add to readme vscode extensions and packages url
