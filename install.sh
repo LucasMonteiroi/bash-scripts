@@ -1,25 +1,24 @@
 #!/bin/bash
 question="Do you want to install"
-choices="\n (y) Yes / (n) No"
+choices="?\n (y) Yes | (n) No | (e) Exit"
 nochoice="installation option is not chosen"
 echo "Updating packages"
-sudo apt-get update -y
 
 #--> Git Installation
-
-echo "$question git? $choices"
+echo "$question git $choices"
 read x
 
 if [[ "${x}" = "y" ]]
 then
   sudo apt install git
   git --version
-else "git $nochoice"
+else 
+  echo "git $nochoice"
 fi
 
 #--> Node Installation
 
-echo "$question nodejs? $choices"
+echo "$question nodejs $choices"
 read x
 
 if [[ "${x}" = "y" ]]
@@ -31,9 +30,8 @@ then
   source /home/$USER/.nvm/nvm.sh
   nvm --version
 
-  read -p  "Enter Node Version (preceding with v)  : " version
-  echo 
-  echo "Entered Node version is - $version"
+  echo "Using Node Version : v14.17.0" 
+  version="v14.17.0" 
   echo "=================================="
   
   nvm install $version
@@ -43,7 +41,7 @@ else
   echo "nodejs $nochoice"
 fi
 
-echo "$question yarn? $choices"
+echo "$question yarn $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -60,7 +58,7 @@ fi
 
 #--> Docker Installation
 
-echo "$question docker? $choices"
+echo "$question docker $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -86,7 +84,7 @@ fi
 
 #--> Slack Installation
 
-echo "$question slack? $choices"
+echo "$question slack $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -98,7 +96,7 @@ fi
 
 #--> VS Code Installation
 
-echo "$question vscode? $choices"
+echo "$question vscode $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -110,7 +108,7 @@ fi
 
 #--> Reactjs Installation
 
-echo "$question reactjs? $choices"
+echo "$question reactjs $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -122,7 +120,7 @@ fi
 
 #--> Angular Installation
 
-echo "$question angular? $choices"
+echo "$question angular $choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -134,7 +132,10 @@ fi
 
 #--> VS Code extensions Installation
 
-echo "Do you want to install vscode extensions?\n You can see all extensions in:\nhttps://github.com/LucasMonteiroi/bash-scripts/blob/master/vscode-extensions.txt"
+echo "Do you want to install vscode extensions?"
+echo "You can see all extensions in:"
+echo "https://github.com/LucasMonteiroi/bash-scripts/blob/master/vscode-extensions.txt"
+echo "$choices"
 read  x
 
 if [[ "${x}" = "y" ]]
@@ -166,4 +167,12 @@ then
   code --install-extension zxh404.vscode-proto3
 else
   echo "vscode extension $nochoice"
+fi
+
+#--> Exit file
+if [[ "${x}" = "e" ]]
+then
+  echo "Thank for use this script, buy me a beer!"
+  echo "https://www.buymeacoffee.com/lucasmonteiroi"
+  exit
 fi

@@ -1,0 +1,4 @@
+Extensions: 
+  ✔ Remove apt-get update in beginning of the file @done (12/05/2021 18:48:57)
+  ✔ Implement exit option @done (12/05/2021 18:54:17)
+  ✔ Implement specifc version from node @done (12/05/2021 18:57:15)
