@@ -2,3 +2,7 @@ Extensions:
   ✔ Remove apt-get update in beginning of the file @done (12/05/2021 18:48:57)
   ✔ Implement exit option @done (12/05/2021 18:54:17)
   ✔ Implement specifc version from node @done (12/05/2021 18:57:15)
+  ✔ Implement Entering in sudo su mode @done (12/05/2021 19:01:48)
+  ✔ Remove echo packages update @done (12/05/2021 19:01:49)
+  ✔ Change nvm installation script, this is not working @done (12/05/2021 19:10:52)
+  ☐ Create menu for all things

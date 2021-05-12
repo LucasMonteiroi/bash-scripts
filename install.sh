@@ -1,8 +1,10 @@
 #!/bin/bash
 question="Do you want to install"
-choices="?\n (y) Yes | (n) No | (e) Exit"
+choices="? (y) Yes | (n) No | (e) Exit"
 nochoice="installation option is not chosen"
-echo "Updating packages"
+
+echo "Entering in su mode"
+sudo su
 
 #--> Git Installation
 echo "$question git $choices"
@@ -10,7 +12,7 @@ read x
 
 if [[ "${x}" = "y" ]]
 then
-  sudo apt install git
+  sudo apt install git -y
   git --version
 else 
   echo "git $nochoice"
@@ -24,10 +26,21 @@ read x
 if [[ "${x}" = "y" ]]
 then
   sudo apt install curl
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh -o install.sh
-  bash install.sh
-  source ~/.profile
-  source /home/$USER/.nvm/nvm.sh
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  
+  if [ -d "$HOME/.nvm" ]; then
+    # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    export NVM_DIR="$HOME/.nvm"
+
+    # This loads nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+    # This loads nvm bash_completion
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  fi
+
+  source ~/.bashrc
   nvm --version
 
   echo "Using Node Version : v14.17.0" 
