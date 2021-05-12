@@ -189,7 +189,7 @@ fi
 
 #--> Exit file
 
-echo "Thank for use this script, buy me a beer!"
-echo "https://www.buymeacoffee.com/lucasmonteiroi"
+echo "Thank for use this script, buy me a 🍺!"
+echo "https://www.buymeacoffee.com/lucasmonteiroi" 
 sleep 5
 exit
