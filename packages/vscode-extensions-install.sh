@@ -1,0 +1,26 @@
+#!/bin/bash
+code --install-extension rangav.vscode-thunder-client
+code --install-extension aaron-bond.better-comments
+code --install-extension chris-noring.node-snippets
+code --install-extension codezombiech.gitignore
+code --install-extension CoenraadS.bracket-pair-colorizer-2
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension dracula-theme.theme-dracula
+code --install-extension EditorConfig.EditorConfig
+code --install-extension esbenp.prettier-vscode
+code --install-extension hediet.vscode-drawio
+code --install-extension icrawl.discord-vscode
+code --install-extension magicstack.MagicPython
+code --install-extension mikestead.dotenv
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-python.python
+code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension PKief.material-icon-theme
+code --install-extension quicktype.quicktype
+code --install-extension redhat.vscode-yaml
+code --install-extension sandy081.todotasks
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension zxh404.vscode-proto3

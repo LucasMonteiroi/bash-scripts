@@ -5,8 +5,12 @@ Extensions:
   ✔ Implement Entering in sudo su mode @done (12/05/2021 19:01:48)
   ✔ Remove echo packages update @done (12/05/2021 19:01:49)
   ✔ Change nvm installation script, this is not working @done (12/05/2021 19:10:52)
-  ☐ Create menu for all things
-  ☐ Enable packages to run outside of sudo su mode
+  ✔ Create menu for all things @done (13/05/2021 14:07:32)
+  ✔ Enable npm run without sudo su mode @done (13/05/2021 12:32:10)
+  ✔ Enable Docker run without sudo mode @done (13/05/2021 12:32:06)
   ✔ Change echo for options @done (12/05/2021 19:31:59)
   ✔ Remove sudo su mode, because script is not continuing @done (12/05/2021 19:15:51)
   ☐ Add to readme vscode extensions and packages url
+  ✔ Add MongoDb Compass @done (13/05/2021 12:36:51)
+  ✔ Separate packages scripts in menu @done (13/05/2021 14:31:03)
+  ☐ Change vscode extensions URL in main script
