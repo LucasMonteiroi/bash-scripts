@@ -3,7 +3,7 @@
 # body="│                                         │"
 # footer="└─────────────────────────────────────────┘"
 git="./packages/git-install.sh"
-nodejs="./packages/nodejs-install.sh"
+nodejs="./packages/node-install.sh"
 yarn="./packages/yarn-install.sh"
 docker="./packages/docker-install.sh"
 slack="./packages/slack-install.sh"
